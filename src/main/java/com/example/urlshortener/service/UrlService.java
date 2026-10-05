@@ -30,6 +30,8 @@ public class UrlService {
         this.urlRepository = urlRepository;
     }
 
+
+
     public UrlResponse createShortUrl(
             CreateUrlRequest request) {
 
@@ -117,9 +119,8 @@ public class UrlService {
     private UrlResponse convertToResponse(
             UrlMapping urlMapping) {
 
-        String shortUrl =
-                "http://localhost:8080/"
-                        + urlMapping.getShortCode();
+        String shortUrl ="http://localhost:8080/r/"+ urlMapping.getShortCode();
+        //String shortUrl = "http://localhost:8080/r/" + saved.getShortCode();
 
         return new UrlResponse(
                 urlMapping.getId(),

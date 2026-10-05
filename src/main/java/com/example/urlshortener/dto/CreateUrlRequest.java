@@ -7,6 +7,7 @@ public record CreateUrlRequest(
 
         @NotBlank(message = "URL is required")
         @Size(max = 2048)
+
         String originalUrl,
 
         String expiresAt
